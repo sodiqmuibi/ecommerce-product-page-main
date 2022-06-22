@@ -1,0 +1,326 @@
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+body {
+    font-family: 'Kumbh Sans', sans-serif;
+}
+.header {
+    border-bottom: 1px solid hsl(220, 14%, 75%);
+    margin-left: 5rem;
+    margin-right: 5rem;
+}
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-bottom: 30px;
+    padding-top: 30px;
+}
+.nav-list {
+    list-style-type: none;
+}
+.nav-brand {
+    display: flex;
+    align-items: center;
+}
+.nav-list .list{
+    display: inline-block;
+    padding: 20px 10px;
+}
+a {
+    text-decoration: none;
+    color: inherit;
+    font-weight: lighter;
+}
+.logo {
+    margin-right: 30px;
+    font-weight: 700;
+    font-size: 2.5rem;
+}
+.nav-list-nav {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+}
+.nav-list-nav img {
+    height: 50px;
+}
+.avatar img {
+    cursor: pointer;
+}
+.avatar img:hover {
+    border: 2px solid hsl(26, 100%, 55%);
+    border-radius: 50%;
+}
+.menu {
+    display: none;
+}
+.row {
+    display: flex;
+    align-items: center;
+    margin-left: 7rem;
+    margin-right: 7rem;
+    margin-top: 5rem;
+    gap: 20px;
+}
+.thumbnail .imglist {
+    display: inline-block;
+    padding: 20px 10px;
+}
+.thumbnail img {
+    height: 100px;
+    border-radius: 8px;
+    cursor: pointer;
+}
+.thumbnail img:hover {
+    transform: translateY(-2px);
+    -webkit-transform: translateY(-2px);
+    box-shadow: 0 3px 15px rgba(0, 0, 0, 0.2);
+    opacity: 0.5;
+}
+.stay,
+.cart-btn:hover,
+.cart-button:hover {
+    transform: translateY(-2px);
+    -webkit-transform: translateY(-2px);
+    box-shadow: 0 3px 15px rgba(0, 0, 0, 0.2);
+    opacity: 0.5;
+}
+.samplepic img {
+    width: 75%;
+    height: auto;
+    border-radius: 8px;
+    cursor: pointer;
+}
+h4 {
+    color: hsl(26, 100%, 55%);
+    text-transform: uppercase;
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+}
+h2 {
+    font-size: 3rem;
+    font-weight: bolder;
+    margin-bottom: 20px;
+}
+.para {
+    color: hsl(219, 9%, 45%);
+    font-size: 16px;
+    margin-bottom: 20px;
+}
+.price {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    margin-bottom: 20px;
+}
+.amount {
+    font-weight: bolder;
+    font-size: 2rem;
+}
+.discount {
+    background-color: hsl(25, 100%, 94%);
+    color: hsl(26, 100%, 55%);
+    padding: 8px;
+    border-radius: 10px;
+}
+.old-price {
+    color: hsl(219, 9%, 45%);
+    text-decoration: line-through;
+    font-weight: bold;
+    font-size: 1.2rem;
+    margin-bottom: 20px;
+}
+.addcart {
+    display: flex;
+    gap: 20px;
+}
+.add-minus {
+    display: flex;
+    background-color: hsl(223, 64%, 98%);
+    padding: 10px 20px;
+    gap: 20px;
+    border-radius: 8px;
+}
+.pointer {
+    cursor: pointer;
+}
+.cart-button {
+    display: flex;
+    background-color: hsl(26, 100%, 55%);
+    color: white;
+    padding: 20px 50px;
+    gap: 10px;
+    border-radius: 8px;
+    cursor: pointer;
+}
+.cart-content {
+    width: 30rem;
+    background-color: white;
+    box-shadow: 0 5px 20px hsl(220, 14%, 75%);
+    border-radius: 1rem;
+    z-index: 9999;
+    position: absolute;
+    right: 80px;
+    display: none;
+}
+.cart-header {
+    font-size: 1rem;
+    padding: 2.9rem 2.4rem;
+    border-bottom: 1px solid black;
+    font-weight: 700;
+}
+.cart-message {
+    font-size: 1.6rem;
+    padding: 6rem 0;
+    text-align: center;
+}
+.cart-message-added {
+    display: flex;
+    padding: 2rem;
+    align-items: center;
+    gap: 30px;
+}
+.cart-name {
+    color: hsl(219, 9%, 45%);
+    font-size: 1.2rem;
+}
+.cart-span {
+    font-weight: bold;
+    color: black;
+}
+.cart-btn {
+    background-color: hsl(26, 100%, 55%);
+    color: white;
+    padding: 20px 50px;
+    border: none;
+    border-radius: 8px;
+    font-size: 1.2rem;
+    margin-left: 20px;
+    margin-right: 20px;
+    margin-bottom: 20px;
+    width: 80%;
+    cursor: pointer;
+}
+.cart-image img {
+    height: 80px;
+    border-radius: 8px;
+}
+.activecart {
+    display: block;   
+}
+.swiper-container {
+    display: none;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.404);
+    top: 0;
+    z-index: 20;
+    position: fixed;
+}
+.swiper-container.show-swiper {
+    display: block;
+}
+.swiper {
+    width: 40%;
+    height: 500px;
+    border-radius: 12px;
+    position: fixed;
+    top: 50px;
+    z-index: 30;
+    left: 50px;
+    
+}
+.swiper-slide img{
+    width: 100%;
+}
+.swiper .swiper-button-prev,
+.swiper .swiper-button-next {
+    color: black;
+    background-color: white;
+    padding: 30px;
+    border-radius: 50%;
+}
+.swiper .swiper-button-prev:hover,
+.swiper .swiper-button-next:hover {
+    color: hsl(26, 100%, 55%);
+}
+.swiper .swiper-pagination-bullet-active {
+    background-color: #fff;
+}
+#item {
+    background-color: hsl(26, 100%, 55%);
+    color: white;
+    border-radius: 40px;
+    position: absolute;
+    top: 40px;
+}
+#cart {
+    cursor: pointer;
+}
+#deleteicon {
+    cursor: pointer;
+}
+@media screen and (max-width: 700px) and (min-width: 400px) {
+    .menu {
+        display: block;
+        position: absolute;
+        left: 30px;
+        top: 30px;
+    }
+    .navbar {
+        flex-direction: column;
+    }
+    .nav-list .list {
+        display: block;
+        padding: 20px 10px;
+    }
+    .nav-list {
+        width: 80%;
+        height: 100%;
+        position: absolute;
+        left: 20px;
+        top: 50px;
+        font-weight: bold;
+        display: none;
+        z-index: 20;
+        background-color: hsl(223, 64%, 98%);
+        margin-top: 20px;
+    } 
+    .logo {
+        position: absolute;
+        left: 70px;
+        top: 10px;
+    }
+    .nav-list-nav {
+        position: absolute;
+        right: 10px;
+        top: 10px;
+    }
+    .header {
+        border-bottom: none;
+    }
+    .active {
+        display: block;
+    }
+    .row {
+        display: flex;
+        flex-direction: column;
+        margin-top: 10px;
+    }
+    .thumbnail .imglist {
+        display: inline-block;
+        padding: 10px 5px;
+    }
+    .thumbnail img {
+        height: 80px;
+        border-radius: 8px;
+        cursor: pointer;
+    }
+    .swiper {
+        width: 70%;
+        height: 400px;
+    } 
+}
